@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pages.page_1.home.HomeFragment">
+
+
+    <include
+        android:id="@+id/include_top_action_bar"
+        layout="@layout/top_action_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_top_action_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_scroll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/home_search"
+                android:layout_width="262dp"
+                android:layout_height="24dp"
+                android:background="@drawable/search_edit_text_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:hint="@string/what_are_you_looking_for"
+                android:paddingEnd="18dp"
+                android:textColorHint="#5B5B5B"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry,SmallSp,TextFields" />
+
+            <!--CATEGORIES-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/suggestion_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/home_search"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/home_search"
+                app:layout_constraintTop_toBottomOf="@+id/home_search"
+                tools:listitem="@layout/suggestion_item" />
+
+            <LinearLayout
+                android:id="@+id/category_layout"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:background="@drawable/bottom_navigation_view_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/suggestion_recycler_view">
+
+                <!--PHONE-->
+                <LinearLayout
+                    android:id="@+id/category_phones"
+                    android:layout_width="42dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="17dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_phone"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_phone" />
+                </LinearLayout>
+
+                <!--HEADPHONES-->
+                <LinearLayout
+                    android:id="@+id/category_headphones"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_headphones"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_headphones" />
+                </LinearLayout>
+
+                <!--JOYSTICK-->
+                <LinearLayout
+                    android:id="@+id/category_joystick"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_joystick"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_joystick" />
+                </LinearLayout>
+
+                <!--CAR-->
+                <LinearLayout
+                    android:id="@+id/category_car"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_car"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_car" />
+                </LinearLayout>
+
+                <!--BED-->
+                <LinearLayout
+                    android:id="@+id/category_bed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_bed"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_bed" />
+                </LinearLayout>
+
+                <!--ROBOT-->
+                <LinearLayout
+                    android:id="@+id/category_robot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="31dp"
+                    android:background="@drawable/category_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_robot"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_robot" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/category_layout">
+
+                <!--LATEST LAYOUT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/latest_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/latest"
+                            android:textColor="#040402"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/latest_view_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@string/view_all"
+                            android:textColor="#808080"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latest_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--FLASH SALE LAYOUT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/flash_sale_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/flash_sale"
+                            android:textColor="#040402"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/flash_sale_view_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@string/view_all"
+                            android:textColor="#808080"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/flash_sale_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!--BRANDS LAYOUT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/brands_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="11dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/brands"
+                            android:textColor="#040402"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/brands_view_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="@string/view_all"
+                            android:textColor="#808080"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brands_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+    <!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

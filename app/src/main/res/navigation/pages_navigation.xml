@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pages_navigation.xml"
+    app:startDestination="@id/nav_sign_in">
+
+    <fragment
+        android:id="@+id/nav_log_in"
+        android:name="ru.effectiv.mobile.ui.pages.log_in.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_nav_log_in_to_nav_sign_in"
+            app:destination="@id/nav_sign_in" />
+        <action
+            android:id="@+id/action_nav_log_in_to_nav_page_1"
+            app:destination="@id/nav_page_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_page_1"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.Page1Fragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/fragment_page1">
+        <action
+            android:id="@+id/action_nav_page_1_to_nav_sign_in"
+            app:destination="@id/nav_sign_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sign_in"
+        android:name="ru.effectiv.mobile.ui.pages.sign_in.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_nav_sign_in_to_nav_log_in"
+            app:destination="@id/nav_log_in" />
+        <action
+            android:id="@+id/action_nav_sign_in_to_nav_page_1"
+            app:destination="@id/nav_page_1" />
+    </fragment>
+</navigation>

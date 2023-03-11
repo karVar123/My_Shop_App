@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="9dp">
+
+    <ImageView
+        android:id="@+id/flash_sale_main_image"
+        android:layout_width="174dp"
+        android:layout_height="221dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/seller_picture"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="7dp"
+        android:src="@drawable/test_seller_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/flash_sale_discount"
+        android:layout_width="49dp"
+        android:layout_height="18dp"
+        android:layout_margin="7dp"
+        android:background="@drawable/discount_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/flash_sale_category"
+        android:layout_width="35dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/product_category_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="#070604"
+        android:textSize="6sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/flash_sale_name"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/flash_sale_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/poppins_medium"
+        android:maxWidth="80dp"
+        android:minWidth="87dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/flash_sale_price"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/flash_sale_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/flash_sale_main_image"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/fresh_sale_add_to_cart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn_add_to_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/flash_sale_add_to_favorite"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn_add_to_favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fresh_sale_add_to_cart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

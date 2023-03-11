@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pege_1_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_page_2"
+            app:destination="@id/nav_page_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_page_2"
+        android:name="ru.effectiv.mobile.ui.pages.product.Page2Fragment"
+        android:label="fragment_page2"
+        tools:layout="@layout/fragment_page2" >
+        <action
+            android:id="@+id/action_nav_page_2_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.message.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.effectiv.mobile.ui.pages.page_1.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
